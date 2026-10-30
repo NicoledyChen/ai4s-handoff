@@ -1,5 +1,7 @@
 # MaSIF：三分钟看懂 AI4S 工作界面
 
+本页介绍 2026-09-10 已有演示；当前产品精修见 [AI4S Agent v3](../../AI4S_AGENT_FRAMEWORK_V3.md)。新增的可追问报告与方法发布机制仍是下一阶段设计，不混入现有 demo 的能力声明。
+
 产品主张：把团队已经用 AI 跑通的 MaSIF 探索成果沉淀为 Skills，让框架稳定执行相近的科学工作轨迹，让用户在关键判断处协作、控制并追溯。
 
 交互演示入口：[app/index.html](/Users/a1/Documents/ChatGPT/agent/demo/masif/app/index.html)。
