@@ -1,0 +1,95 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900" role="img" aria-labelledby="title desc">
+  <title id="title">基础设施架构</title>
+  <desc id="desc">AI4S 与 MaSIF 概念架构。上层 Grok 式 HCI 与 Harness 接入待核验，由任务合同及 Work IR 将工作交给类型化 Agent。回放适配器与未来真实执行适配器明确分开，产物留在 Notebook、Git、结构数据、原生计算工具及现行权限体系中。结果和原生修改回流到版本化工作记录，保存决定、权限引用与未决状态，再经角色分层和 Lumen 多级投影返回工作面。此图不是已经接通服务的部署现状图。</desc>
+  <defs>
+    <marker id="arrowBlue" viewBox="0 0 12 12" refX="10" refY="6" markerWidth="9" markerHeight="9" orient="auto-start-reverse">
+      <path d="M 1 1 L 11 6 L 1 11 Z" fill="#2D5BFF"/>
+    </marker>
+    <marker id="arrowTeal" viewBox="0 0 12 12" refX="10" refY="6" markerWidth="9" markerHeight="9" orient="auto-start-reverse">
+      <path d="M 1 1 L 11 6 L 1 11 Z" fill="#168A86"/>
+    </marker>
+    <marker id="arrowOrange" viewBox="0 0 12 12" refX="10" refY="6" markerWidth="9" markerHeight="9" orient="auto-start-reverse">
+      <path d="M 1 1 L 11 6 L 1 11 Z" fill="#C88724"/>
+    </marker>
+  </defs>
+
+  <rect width="1600" height="900" fill="#F8FAFC"/>
+  <g font-family="PingFang SC, Microsoft YaHei, sans-serif" fill="#142B3F">
+    <text x="72" y="82" font-size="46" font-weight="700">基础设施架构</text>
+    <text x="72" y="128" font-size="28">可替换智能层，工作留在既有工具中</text>
+    <text x="1528" y="82" font-size="24" font-weight="600" text-anchor="end" fill="#2D5BFF">AI4S × MaSIF</text>
+    <rect x="72" y="150" width="72" height="4" rx="2" fill="#2D5BFF"/>
+
+    <!-- Directed connections: work goes down; native results return upward. -->
+    <g fill="none" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M 507 310 L 507 352" stroke="#2D5BFF" marker-end="url(#arrowBlue)"/>
+      <path d="M 507 482 L 507 506 L 272 506 L 272 525" stroke="#2D5BFF" marker-end="url(#arrowBlue)"/>
+      <path d="M 507 506 L 742 506 L 742 525" stroke="#C88724" stroke-dasharray="9 8" marker-end="url(#arrowOrange)"/>
+      <path d="M 272 651 L 272 690" stroke="#2D5BFF" marker-end="url(#arrowBlue)"/>
+      <path d="M 742 651 L 742 690" stroke="#C88724" stroke-dasharray="9 8" marker-end="url(#arrowOrange)"/>
+      <path d="M 942 422 L 997 422 L 997 498 L 1044 498" stroke="#2D5BFF" marker-end="url(#arrowBlue)"/>
+      <path d="M 942 758 L 1044 758" stroke="#168A86" marker-end="url(#arrowTeal)"/>
+      <path d="M 1291 650 L 1291 606" stroke="#168A86" marker-end="url(#arrowTeal)"/>
+      <path d="M 1291 411 L 1291 369" stroke="#168A86" marker-end="url(#arrowTeal)"/>
+      <path d="M 1054 242 L 952 242" stroke="#168A86" marker-end="url(#arrowTeal)"/>
+    </g>
+    <text x="1004" y="223" font-size="22" text-anchor="middle" fill="#168A86">呈现</text>
+    <text x="979" y="404" font-size="22" text-anchor="middle" fill="#2D5BFF">留档</text>
+    <text x="997" y="739" font-size="22" text-anchor="middle" fill="#168A86">引用</text>
+
+    <!-- 1. Upper interaction and harness boundary. -->
+    <rect x="72" y="185" width="870" height="125" rx="20" fill="#FFFFFF" stroke="#D7E2EB" stroke-width="2"/>
+    <rect x="72" y="185" width="8" height="125" rx="4" fill="#2D5BFF"/>
+    <text x="104" y="230" font-size="28" font-weight="700">Grok Bot Chat</text>
+    <text x="104" y="276" font-size="26">角色单聊 · 群聊协作 · 结果卡片</text>
+    <rect x="746" y="208" width="168" height="40" rx="20" fill="#FFF3DD"/>
+    <text x="830" y="235" font-size="22" font-weight="600" text-anchor="middle" fill="#C88724">协作入口</text>
+
+    <!-- 2. Contract and task semantics, not another source of truth. -->
+    <rect x="72" y="362" width="870" height="120" rx="20" fill="#EEF3FF" stroke="#CAD8FF" stroke-width="2"/>
+    <text x="104" y="406" font-size="28" font-weight="700">Harness · Work IR · 类型化 Agent</text>
+    <text x="104" y="451" font-size="26">分析 · 可视化 · 证据整理 · 流程执行</text>
+
+    <!-- 3. Replay demo path. -->
+    <rect x="72" y="535" width="400" height="116" rx="18" fill="#FFFFFF" stroke="#2D5BFF" stroke-width="2"/>
+    <text x="98" y="576" font-size="28" font-weight="700" fill="#2D5BFF">Skill 与流程适配</text>
+    <text x="98" y="612" font-size="24">输入 · 参数 · 依赖 · 检查点</text>
+    <text x="98" y="639" font-size="22">已有探索 → 稳定任务</text>
+
+    <!-- 4. Future execution is deliberately dashed and labelled. -->
+    <rect x="542" y="535" width="400" height="116" rx="18" fill="#FFF9EE" stroke="#C88724" stroke-width="2" stroke-dasharray="9 7"/>
+    <text x="568" y="576" font-size="28" font-weight="700" fill="#C88724">原生工具执行</text>
+    <text x="568" y="612" font-size="24">MaSIF / Rosetta / AF3</text>
+    <text x="568" y="639" font-size="22">接口 · 权限 · 生命周期</text>
+
+    <!-- 5. Existing, human-owned infrastructure. -->
+    <rect x="72" y="700" width="870" height="116" rx="20" fill="#EAF7F4" stroke="#A4D2C9" stroke-width="2"/>
+    <text x="104" y="744" font-size="28" font-weight="700" fill="#168A86">既有工作基础设施</text>
+    <text x="104" y="790" font-size="26">Notebook · Git · 结构/数据 · 原生计算</text>
+    <rect x="772" y="719" width="142" height="39" rx="19" fill="#D6EEE8"/>
+    <text x="843" y="746" font-size="22" font-weight="600" text-anchor="middle" fill="#168A86">现行权限</text>
+
+    <!-- 6. Stable facts are projected, not copied into competing truths. -->
+    <rect x="1054" y="185" width="474" height="174" rx="20" fill="#FFFFFF" stroke="#D7E2EB" stroke-width="2"/>
+    <text x="1082" y="227" font-size="28" font-weight="700">角色分层 → Lumen 投影</text>
+    <text x="1082" y="268" font-size="22">Signal · Summary · Workbench</text>
+    <text x="1082" y="300" font-size="22">Analysis · Source</text>
+    <text x="1082" y="335" font-size="22" fill="#168A86">来源、状态与限制全程保留</text>
+
+    <!-- 7. Open and durable records preserve decisions and pending effects. -->
+    <rect x="1054" y="411" width="474" height="185" rx="20" fill="#FFFFFF" stroke="#D7E2EB" stroke-width="2"/>
+    <text x="1082" y="452" font-size="28" font-weight="700">版本化工作记录</text>
+    <text x="1082" y="492" font-size="26">产物引用 · 参数与决定</text>
+    <text x="1082" y="531" font-size="26">权限引用 · 未决状态</text>
+    <text x="1082" y="570" font-size="24" fill="#168A86">Checkpoint · 可带走</text>
+
+    <!-- 8. Native edits are reconciled before downstream reuse. -->
+    <rect x="1054" y="650" width="474" height="166" rx="20" fill="#EAF7F4" stroke="#A4D2C9" stroke-width="2"/>
+    <text x="1082" y="692" font-size="28" font-weight="700" fill="#168A86">结果与原生修改回流</text>
+    <text x="1082" y="736" font-size="24">原生版本核对 · 依赖复核</text>
+    <text x="1082" y="779" font-size="24">不被 Agent 缓存覆盖</text>
+
+    <path d="M 72 844 H 1528" stroke="#D7E2EB" stroke-width="2"/>
+    <text x="72" y="878" font-size="22">产品化路径｜已有 AI 探索成果 → Skill 固化 → 稳定执行与可追溯协作</text>
+  </g>
+</svg>

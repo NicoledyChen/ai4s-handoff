@@ -1,0 +1,136 @@
+{
+  "schemaVersion": "demo-0.1",
+  "caseId": "MASIF-CONCEPT-01",
+  "containsTeamReportedResearchResults": true,
+  "isRawResearchDataset": false,
+  "isNewScientificRun": false,
+  "defaultExecutionMode": "replay",
+  "notice": "The workflow and aggregate results come from the team's completed AI-assisted research, confirmed by the user. The four candidate records are separate interaction fixtures, not raw research candidates. The app productizes the existing trajectory; opening it does not start a new scientific run.",
+  "sourceKinds": [
+    "team-record",
+    "document-example",
+    "offline-result",
+    "synthetic"
+  ],
+  "executionModes": [
+    "replay",
+    "local-interaction",
+    "live"
+  ],
+  "nodes": [
+    {
+      "id": "N1",
+      "sourceSection": 4,
+      "label": "位点确认"
+    },
+    {
+      "id": "N2",
+      "sourceSection": 8,
+      "label": "设计边界"
+    },
+    {
+      "id": "N3",
+      "sourceSection": 11,
+      "label": "母体选择"
+    },
+    {
+      "id": "N4",
+      "sourceSection": 12,
+      "label": "AF3复核"
+    }
+  ],
+  "documentAggregates": {
+    "sourceKind": "team-record",
+    "sourceRef": "sources/guide-extracted.txt",
+    "measuredByThisApp": false,
+    "masifMatches": 208,
+    "siteMatches": {
+      "0": 194,
+      "1": 14
+    },
+    "clusterRepresentatives": 60,
+    "postRosettaFilteringSeedMotifs": 13,
+    "parseableGrafts": 1864,
+    "filteredGrafts": 633,
+    "filteredGraftSeedSourceCount": 3,
+    "af3Inputs": 150,
+    "af3ModelSeedsPerInput": 1,
+    "sourceProportions": null,
+    "selectionMapping633To150": null
+  },
+  "syntheticCandidates": [
+    {
+      "id": "DEMO-M01",
+      "sourceKind": "synthetic",
+      "seedSource": "DEMO-SEED-A",
+      "scaffoldFamily": "DEMO-FOLD-X",
+      "selectedAtN3": true,
+      "n4Scenario": "confidence-and-site-conflict",
+      "n4Disposition": "return-for-review",
+      "structureRef": null,
+      "measuredScores": null
+    },
+    {
+      "id": "DEMO-M02",
+      "sourceKind": "synthetic",
+      "seedSource": "DEMO-SEED-A",
+      "scaffoldFamily": "DEMO-FOLD-X",
+      "selectedAtN3": false,
+      "n3Disposition": "retain-unselected-alternative",
+      "n3Reason": "same source and family as M01 in this illustrative dataset",
+      "structureRef": null,
+      "measuredScores": null
+    },
+    {
+      "id": "DEMO-M03",
+      "sourceKind": "synthetic",
+      "seedSource": "DEMO-SEED-B",
+      "scaffoldFamily": "DEMO-FOLD-Y",
+      "selectedAtN3": true,
+      "n4Scenario": "no-illustrative-site-conflict-repeat-evidence-missing",
+      "n4Disposition": "retain-pending-further-review",
+      "structureRef": null,
+      "measuredScores": null
+    },
+    {
+      "id": "DEMO-M04",
+      "sourceKind": "synthetic",
+      "seedSource": "DEMO-SEED-C",
+      "scaffoldFamily": "DEMO-FOLD-Z",
+      "selectedAtN3": false,
+      "n3Disposition": "pending-inputs",
+      "structureRef": null,
+      "measuredScores": null
+    }
+  ],
+  "pendingActions": [
+    {
+      "id": "DEMO-REVIEW-PROPOSAL",
+      "state": "proposed",
+      "approved": false,
+      "submitted": false,
+      "costEstimate": null
+    }
+  ],
+  "bridgeNotices": [
+    {
+      "from": "N1",
+      "to": "N2",
+      "sourceStages": [
+        5,
+        6,
+        7
+      ],
+      "executionMode": "replay"
+    },
+    {
+      "from": "N2",
+      "to": "N3",
+      "sourceStages": [
+        9,
+        10
+      ],
+      "executionMode": "replay"
+    }
+  ]
+}
